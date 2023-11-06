@@ -14,6 +14,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 
+import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   apiKey: "AIzaSyAoQnHLMFSNLkCehUgqz1WGAoPqCGHfUXM",
   authDomain: "hello-world-1e5b3.firebaseapp.com",
@@ -26,6 +27,7 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 const db = getFirestore();
+const auth = getAuth();
 
 const colRef = collection(db, "books");
 
